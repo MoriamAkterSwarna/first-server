@@ -14,12 +14,6 @@ app.get("/priceOptions", (req, res) => {
   res.send(options);
 });
 
-app.get("/priceOptions/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  console.log("i need data for id: ", id);
-  const option = options.find((option) => option.id === id) || {};
-  res.send(option);
-});
 
 app.listen(port, () => {
   console.log(`My Price Options server is running on port: ${port}`);
